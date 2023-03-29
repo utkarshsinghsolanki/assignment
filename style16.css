@@ -1,0 +1,38 @@
+h1{
+	position:relative;
+	font-style:italic;
+	font-weight:bolder;
+	color:white;
+	text-align:center;
+	text-decoration: underline;
+	padding:2px;
+}
+.quote1{
+	border: solid 5px blue;
+	clear:both;
+	height:500px;
+	width:500px;
+	position:relative;
+	margin:20px;
+	left:500px;
+	outline:solid 2px red;
+}
+.quote2{
+	border: solid 5px brown;
+	clear:both;
+	height:500px;
+	width:500px;
+	position:relative;
+	margin:20px;
+	left:500px;
+	outline:solid 2px red;
+}
+img{
+	position:absolute;
+	top:0;
+	height:100%;
+	width:100%;
+	z-index: -1;
+	margin: 0px;
+	clear:both;
+}

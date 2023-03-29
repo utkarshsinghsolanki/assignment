@@ -1,0 +1,58 @@
+<!--<html>
+<head>
+<title>Exercise 29</title>
+</head>
+<body>	
+	increase()
+	{
+		style.fontSize=x++;
+	}
+	function genRandom(min,max)
+	{
+		return Math.floor(Math.random() * (max-min+1)+min);
+	}
+
+</body>
+</html>-->
+<html>
+<head>
+	<title>Exercise 29</title>
+	<style>
+		div{
+			background-color:black;
+			height:50%;
+			width:50%;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div id="text"> </div>
+	<script>
+		var inc=setInterval(increase,100);
+		var size=5;
+		var eId=document.getElementById("text");
+		function increase()
+		{
+			size=size+5;
+			eId.innerHTML="TEXT-GROWING";
+			eId.setAttribute("style","font-size:"+size+"px; color:red");
+			if(size>=50)
+			{
+				clearInterval(inc);
+				var set=setInterval(decrease,100);
+			}
+		}
+		function decrease()
+		{
+			size=size-5;
+			eId.innerHTML="TEXT-SHRINKING";
+			eId.setAttribute("style","font-size:"+size+"px; color:blue");
+			if(size<=5)
+			{
+				clearInterval(inc);
+			}
+		}
+	</script>
+</body>
+</html>

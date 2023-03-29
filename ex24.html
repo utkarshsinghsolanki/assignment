@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title> Exercise 24</title>
+</head>
+<body>
+	<form method="get">
+	<table border=2em;>
+		<tr>
+			<td>
+			<input type="number" class="input" onchange="convert()"/>
+			</td>
+			<td>
+			<select class="inOp" onchange="convert()">
+				<option value="K">Kelvin</option>
+				<option value="F">Fahrenheit</option>
+				<option value="C">Celsius</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="number" class="output" />
+			</td>
+			<td>
+			<select class="outOp" onchange="convert()">
+				<option value="K">Kelvin</option>
+				<option value="F">Fahrenheit</option>
+				<option value="C">Celsius</option>
+			</select>
+			</td>
+		</tr>
+	</table>
+	</form>
+	<!--<button onclick="convert()">Convert</button>-->
+	<script>
+		function convert()
+		{
+			input=parseFloat(document.forms[0].elements[0].value);
+			inOp=document.forms[0].elements[1].value;
+			outOp=document.forms[0].elements[3].value;
+			if(inOp=='C' && outOp=='K')
+			{
+				res=input+273;
+			}
+			else if(inOp=='C' && outOp=='F')
+			{
+				res=(input*(1.8))+32;
+			}
+			else if(inOp=='F' && outOp=='C')
+			{
+				res=(5*(input-32))/9;
+			}
+			else if(inOp=='F' && outOp=='K')
+			{
+				res=((input-32)*(5/9.0))+273;
+			}
+			else if(inOp=='K' && outOp=='C')
+			{
+				res=273-input;
+			}
+			else if(inOp=='K' && outOp=='F')
+			{
+				res=((input-273)*(1.8))+32;
+			}
+			else 
+			{
+				res=input;
+			}
+			document.forms[0].elements[2].value=res;
+		}
+	</script>
+</body>
+</html>
+

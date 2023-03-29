@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>
+	#show{
+		position:relative;
+		color:blue;
+	}
+</style>
+</head>
+<body>
+	0<input type="range" id="r" min="0" max="100" onchange="printNumber()" >100<br>
+	<label id="show"></label>
+	<script>
+		function printNumber()
+		{
+			document.getElementById('show').innerHTML=document.getElementById('r').value;
+			document.getElementById('show').style.left=document.getElementById('r').value;
+		}
+	</script>
+</body>
+</html>

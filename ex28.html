@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> Exercise 28</title>
+<style>
+	body{
+		background-color:lightblue;
+	}
+	div{
+		background-color:darkblue;
+		color:white;
+		font-family:cursive;
+		height:50vmin;
+		width:70vmin;
+		text-align:center;
+		display:flex;
+		justify-content:center;
+		margin-left:70vmin;
+		margin-top:20vmin;
+		border-radius:10%;
+		font-size:25px;
+		box-shadow:10px 10px 5px black;
+		padding-top:8rem;
+	}
+	
+</style>
+</head>
+<body>
+	<div id=wish onclick='hide()'> </div>
+	<script>
+		fname=prompt("Enter Your Name: ");
+		d=new Date();
+		hr=d.getHours();
+		if(hr<=12)
+			greet="Good Morning"
+		else if(hr <= 17)
+			greet="Good Afternoon"
+		else
+			greet="Good Evening";
+		document.getElementById('wish').innerHTML=greet+" "+fname;
+		function hide()
+		{
+			document.getElementById('wish').style.display='none';
+		}
+	</script>
+</body>
+</html>

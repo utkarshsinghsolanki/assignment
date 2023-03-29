@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Exercise 30</title>
+<style>
+	body{
+		background-color: #85FFBD;
+		background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+	}
+	.d1{
+		color:black;
+		background-color:rgba(230,150,140,0.3);
+		text-shadow:5px 5px 10px red;
+		height:10%;
+		text-align:center;
+		
+	}
+	.d2{
+		background-color:rgba(225,23,240,0.3);
+		margin-top:8%;
+		height:40%;
+		width:30%;
+		margin-left:35%;
+		text-align:center;
+		color:white;
+		text-shadow:5px 5px 5px black;
+		font-size:40px;
+		padding-top:10%;
+		border-radius:25%;
+		box-shadow:10px 10px 5px lavender;
+	}
+	.d2 button{
+		height:15%;
+		width:25%;
+		font-size:25px;
+		background-color:green;
+	}
+</style>
+</head>
+<body>
+  <div class=d1><marquee><h1>**Guess the number between 1 and 1000**</h1></marquee></div>
+  <div id="guess" class=d2>
+    <label for="n">Guess a number</label> 
+	<input type="number" id="n" width="120px"><br><br><br>
+    <button onclick="guess()">Submit</button>
+  </div>
+  <script>
+  var number = generateNewValue();
+  function generateNewValue()
+  {
+	/*return Math.floor(Math.random() * (max-min+1)+min);*/
+	return Math.floor(Math.random() * (1000-1+1)+1);
+  }
+  function guess()
+  {
+    if (document.getElementById("n").value == undefined || document.getElementById("n").value.trim() == "" || isNaN(document.getElementById("n").value))
+	{
+      alert("Please type a number");
+      document.getElementById("n").focus();
+      return false;
+    }
+    if (parseInt(document.getElementById("n").value) > number)
+	{
+      alert("Too high\n\nTry again.");
+    }
+	else if (parseInt(document.getElementById("n").value) < number)
+	{
+      alert("Too low\n\nTry again.");
+    }
+	else
+	{
+      alert("Congratulations!!\n\nYou guessed the number.");
+      number = generateNewValue();
+    }
+    document.getElementById("n").value = "";
+    document.getElementById("n").focus();
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+p{
+	border-style:dashed;
+	border-color:pink;
+	border-width:10px;
+	box-sizing:border-box;
+	float:left;
+	width:300px;
+	margin:20px;
+	background-color:beige;
+	font-size:20px;
+	color:red;
+	text-align:center;
+}
+h1{
+	background-color:lavender;
+	border-style:solid;
+	border-width:1px;
+	text-align:center;
+	color:purple;
+}

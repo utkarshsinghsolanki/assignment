@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Payment</title>
+	</head>
+	<body bgcolor="e6c2ef" >
+		<form method="get" action="OrderConfirmation.html">
+		<table border=0 bgcolor="yellow" align="center" height="50%" width="50%" >
+			<tr>
+				<td colspan=2 align="center" bgcolor="8000ff"><h1 align=center>Payment by Credit Card</h1><h3 align=center>Please enter the Credit Card details</h3> </td>
+			</tr>
+			<tr>
+				<td><label>Enter the Card Type</label></td>
+				<td>
+					<select name=rate>
+						<option value=w>Credit Card</option>
+						<option value=avg>Debit Card</option>
+						<option value=b>Charge Card</option>
+					</select><br>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Enter Card Number</label></td>
+				<td><input type=number name=name required /><br></td>
+			</tr>
+			<tr>
+				<td><label>Enter CVV Number</label></td>
+				<td><input type=text  required /><br></td>
+			</tr>
+			<tr>
+				<td><label>Enter the amount you have to pay</label></td>
+				<td><input type=number name=amt required /><br></td>
+			</tr>
+			<tr>
+				<td colspan=2 align="center" bgcolor=green ><input type=submit value=Pay /></td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>

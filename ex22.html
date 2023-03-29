@@ -1,0 +1,53 @@
+<html>
+	<head>
+	<style>
+	.container{
+		display:flex;
+	}
+	.inner1{
+		background-color:black;
+		height:60px;
+		width:60px;
+		color:black;
+		font-size:12px;
+	}
+	.inner2{
+		background-color:red;
+		height:60px;
+		width:60px;
+		color:red;
+		font-size:12px;
+	}
+	.container > .inner1:hover{
+		transform:scale(1.2);
+		tranisition:2s;
+		background-color:blue;
+		color:red;
+	}
+	.container > .inner2:hover{
+		transform:scale(1.2);
+		tranisition:2s;
+		background-color:green;
+		color:yellow;
+	}
+	</style>
+	</head>
+<body>
+	<script>
+		row=prompt("Enter rows: ");
+		col=prompt("Enter columns: ");
+		for(i=1;i<=row;i++)
+		{
+			document.write("<div class=container> ")
+			for(j=1;j<=col;j++)
+			{
+				if((i+j)%2==0)
+					document.write("<div class=inner1>"+j+"</div>")
+				else
+					document.write("<div class=inner2>"+j+" </div>")	
+			}
+			document.write("</div>")
+		}
+	</script>
+</body>
+</html>

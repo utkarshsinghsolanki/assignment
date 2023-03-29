@@ -1,0 +1,168 @@
+<html>
+<head>
+<title> Exercise 25</title>
+<style>
+	body{
+		background:linear-gradient(to bottom,pink,skyblue);
+	}
+	table{
+		background-color:whitesmoke;
+		height:100px;
+		font-size:1.5em;
+		border:2px;
+	}
+	td{
+		margin:5px;
+		padding:10px;
+	}
+	h1{
+		font-family:Times New Roman;
+		margin-top:2em;
+		weight:bold;
+		color:DarkBlue;
+	}
+	button{
+		background-color:lightblue;
+		font-size:1em;
+		border-radius:2em;
+	}
+	button:hover{
+		transition:1.2s;
+		transform:scale(1.1);
+		color:green;
+	}
+		
+</style>
+</head>
+<body>
+	<form method="get" onsubmit="return validate()">
+	<h1 align=center>Registration Form</h1>
+	<table align="center">
+		<tr>
+		<td>
+			<label>Enter First Name</label>
+		</td>
+		<td>
+			<input type="text" id="fn" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<label>Enter Last Name</label>
+		</td>
+		<td>
+			<input type="text" id="ln" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<label>Enter User ID</label>
+		</td>
+		<td>
+			<input type="text" id="uid" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<label>Enter Password</label>
+		</td>
+		<td>
+			<input type="password" id="pass" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<label>Confirm Password</label>
+		</td>
+		<td>
+			<input type="password" id="cpass" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<label>Enter Address</label>
+		</td>
+		<td>
+			<input type="text" id="add" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<label>Enter Email ID</label>
+		</td>
+		<td>
+			<input type="text" id="eid" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<label>Enter Contact Number</label>
+		</td>
+		<td>
+			<input type="text" id="pn" /><br>
+		</td>
+		</tr>
+		<tr>
+		<td colspan=2>
+			<button type="submit">Register</button>
+		</td>	
+		</tr>
+	</table>
+	</form>
+	<script>
+	function validate()
+	{
+		var fname=document.getElementById('fn').value;
+		var lname=document.getElementById('ln').value;
+		var userID=document.getElementById('uid').value;
+		var password=document.getElementById('pass').value;
+		var cpassword=document.getElementById('cpass').value;
+		var address=document.getElementById('add').value;
+		var emailID=document.getElementById('eid').value;
+		var contact=document.getElementById('pn').value;
+		var fnameReg=/^[a-zA-Z]{2,30}$/;
+		var lnameReg=/^[a-zA-Z]{0,30}$/;
+		var uidReg=/^[A-Z]{5}[0-9]{5}$/;
+		var passReg=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,16}$/;
+		addressLength=address.length;
+		var emailReg=/^[0-9a-zA-Z]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+		var contactReg=/^[1-9][0-9]{9}$/;
+		if(fnameReg.test(fname)==false)
+		{
+			alert("Enter a valid First Name");
+		}
+		else if(lnameReg.test(lname)==false)
+		{
+			alert("Enter a valid Last Name");
+		}
+		else if(uidReg.test(userID)==false)
+		{
+			alert("Enter a valid User ID");
+		}
+		else if(passReg.test(password)==false)
+		{
+			alert("Enter a valid Password");
+		}
+		else if(password!=cpassword)
+		{
+			alert("Password do not match");
+		}
+		else if(addressLength <= 0)
+		{
+			alert("Enter a valid Address");
+		}
+		else if(emailReg.test(emailID)==false)
+		{
+			alert("Enter a valid EmailID");
+		}
+		else if(contactReg.test(contact)==false)
+		{
+			alert("Enter a valid Number");
+		}
+		else{
+		 return true;
+		}
+	}
+	</script>
+</body>
+</html>

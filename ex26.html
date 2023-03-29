@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Exercise 26</title>
+<style>
+	div{
+		font-size:50px;
+		background-color:blue;
+		color:white;
+		font-family:cursive;
+	}
+
+</style>
+</head>
+<body>
+	<div id=counter>	</div>
+	<button onclick='x=setInterval(start,1000)'>Start</button>
+	<button onclick='clearInterval(x)'>Stop</button>
+	<script>
+		block=document.getElementById('counter');
+		count=0;
+		function start()
+		{
+			count=count+1;
+			block.innerHTML=count;
+		}	
+	</script>
+</body>
+</html>

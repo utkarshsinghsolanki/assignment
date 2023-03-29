@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title> Exercise 9 </title>
+	</head>
+	<body bgcolor=brown >
+		<table border=2 cellpadding=3 align=center bgcolor=yellow>
+			<tr>
+				<td colspan=2>
+					<h1> Software Product Feedback Form</h1>
+				</td>
+			</tr>
+			<form method="post" action=profilepage.html>
+			<tr>
+				<td>
+					<label>  First Name </label>
+				</td>
+				<td>
+					<input type=textarea name=fname placeholder="First Name"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label> Last Name </label>
+				</td>
+				<td>
+					<input type=textarea name=lname Placeholder="Last Name" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label> Contact Number </label>
+				</td>
+				<td>
+					<input type=number name=mnum  placeholder=+91 />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label> Email </label>
+				</td>
+				<td>
+					<input type=email placeholder="xyz@gmail.com" />
+				</td>
+			</tr>
+			<tr>
+				<td> 
+					<label> How satisfy are you with our product? </label>
+				</td>
+				<td>
+					<input type=radio name=satisy value=a  />
+					<label> Very Satisfied </label><br>
+					<input type=radio name=satisy value=b />
+					<label> Satisfied </label><br>
+					<input type=radio name=satisfy value=c />
+					<label> Dissatisfied </label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label> How long have you used our product? </label>
+				</td>
+				<td>
+					<input type=checkbox name=duration value=a />
+					<label> 6 month + </label><br>
+					<input type=checkbox name=duration value=b />
+					<label> 1 to 6 months </label><br>
+					<input type=checkbox name=duration value=c />
+					<label> Less than 1 month </label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label> How would you rate the experience </label>
+				</td>
+				<td>
+					<select name=rate >
+						<option value=worst> Worst </option>
+						<option value=good> Good </option>
+						<option value="very good"> Very Good </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan=2>
+					<textarea name=comment> Any Comments... </textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan=2 align=center>
+					<input type=submit />
+				</td>
+			</tr>
+			</form>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+.container{
+    border: 2px solid rgb(145, 3, 3);
+    width: 600px;
+    height: 600px;
+    display: flex;
+    /*flex-direction: row-reverse row wrap wrap-reverse;*/
+    flex-flow: row wrap;
+    background-color: pink;
+	margin:20px;
+}
+.container > div{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    /*transform: rotate(45deg) scale(1.5);*/
+	margin:30px;
+}
+.container > div >img{
+	height:50%;
+	width:50%
+}
+.container >div >img:hover{
+	transform:scale(1.2);
+	tranisition:2s;
+}

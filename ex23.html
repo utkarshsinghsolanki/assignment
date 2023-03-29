@@ -1,0 +1,54 @@
+<html>
+	<head>
+	<title>Exercise 23</title>
+	<style>
+	*{
+		box-sizing:border-box;
+	}
+	.card{
+		width:33%;
+		box-shadow:2px 2px 4px black;
+		padding:2px;
+		position:relative;
+	}
+	.card> img{
+		width:100%;
+	}
+	.desc{
+		padding:10px;
+	}
+	.date{
+		width:150px;
+		background-color:rgba(234,34,234,0.3);
+		position:absolute;
+		height:50px;
+		font-size:40px;
+		color:white;
+		top:58%;
+		left:4%;
+		transform:rotate(-4deg);
+		
+	}
+	</style>
+	</head>
+<body>
+	<div style='display:flex;justify-content:space-evenly;'>
+	<script>
+		images=["24.jpg","14.jpg","27.jpg"]
+		titles=["Annual Function","Good Day","Marine Life"]
+		for(i=0;i<3;i++)
+		{
+			card="<div class='card'>"
+			+"<img src='images/"+images[i]+" ' />"
+			+"<div class='date'> 23 Feb </div>"
+				+"<div class='desc'>"
+					+"<h1>"+titles[i]+"</h1>"
+					+"<p>Introduction</p>"
+				+"</div>"
+			+"</div>"
+			document.write(card);
+		}
+	</script>
+	</div>
+</body>
+</html>
